@@ -67,6 +67,7 @@ exports.checkPerformance = async (req, res) => {
         const bestPracticesScore = res.lighthouseResult.categories['best-practices'].score * 100;
         const seoScore = res.lighthouseResult.categories.seo.score * 100;
         const pwaScore = res.lighthouseResult.categories.pwa.score * 100;
+        const entities =  res.lighthouseResult.entities
 
         //loadingExperience
         const loadingExperience = {
@@ -124,7 +125,8 @@ exports.checkPerformance = async (req, res) => {
                     bestPracticesScore,
                     seoScore,
                     pwaScore,
-                    loadingExperience
+                    loadingExperience,
+                    entities
                 }
             }
         );
@@ -153,6 +155,7 @@ exports.checkPerformance = async (req, res) => {
         const bestPracticesScore = res.lighthouseResult.categories['best-practices'].score * 100;
         const seoScore = res.lighthouseResult.categories.seo.score * 100;
         const pwaScore = res.lighthouseResult.categories.pwa.score * 100;
+        const entities =  res.lighthouseResult.entities
 
         //loadingExperience
         const loadingExperience = {
@@ -210,7 +213,8 @@ exports.checkPerformance = async (req, res) => {
                     bestPracticesScore,
                     seoScore,
                     pwaScore,
-                    loadingExperience
+                    loadingExperience,
+                    entities
                 }
             }
         );
