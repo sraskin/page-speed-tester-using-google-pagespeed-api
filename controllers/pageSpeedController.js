@@ -31,6 +31,7 @@ function getPerformanceScore(strategy, testUrl) {
 exports.checkPerformance = async (req, res) => {
     //get data from testUrl param
     const testUrl = req.query.testUrl;
+    console.log(testUrl);
     const results = [];
     if (!testUrl) {
         return res.status(400).json({
