@@ -225,3 +225,4 @@ yarn-error.log*
 .vscode
 /public/*
 /mongodb_data
+package-lock.json
