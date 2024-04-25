@@ -70,8 +70,7 @@ exports.getReport = async (req, res) => {
 
         Object.keys(sum.loadingExperience).forEach((key) => {
             if (key === 'CUMULATIVE_LAYOUT_SHIFT_SCORE') {
-                let percentile =
-                    (sum.loadingExperience[key] / data.length) * 100;
+                let percentile = sum.loadingExperience[key] / data.length;
                 let category = '';
                 if (percentile <= 0.1) {
                     category = 'Good';
