@@ -45,11 +45,13 @@ exports.getReport = async (req, res) => {
     });
 
     const average = {
-        performanceScore: sum.performanceScore / data.length,
-        accessibilityScore: sum.accessibilityScore / data.length,
-        bestPracticesScore: sum.bestPracticesScore / data.length,
-        seoScore: sum.seoScore / data.length,
-        pwaScore: sum.pwaScore / data.length,
+        performanceScore: (sum.performanceScore / data.length).toFixed(2) + '%',
+        accessibilityScore:
+            (sum.accessibilityScore / data.length).toFixed(2) + '%',
+        bestPracticesScore:
+            (sum.bestPracticesScore / data.length).toFixed(2) + '%',
+        seoScore: (sum.seoScore / data.length).toFixed(2) + '%',
+        pwaScore: (sum.pwaScore / data.length).toFixed(2) + '%',
         loadingExperience: {}
     };
 
