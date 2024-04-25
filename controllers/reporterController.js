@@ -173,7 +173,7 @@ exports.getReport = async (req, res) => {
     });
     res.status(200).json({
         message: 'Success',
-        hint: 'Add query param for the report. ?days=1 means last 1 day, ?days=7 means last 7 days, etc.',
+        help: 'Add query param for the report. ?days=1 means last 1 day, ?days=7 means last 7 days, etc.',
         data: averages
     });
 };
