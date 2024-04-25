@@ -27,9 +27,10 @@ mongoose.connection.on('error', (err) => {
 });
 
 const pageSpeedRoute = require('./routes/pageSpeedRoute');
-
+const reporterRoute = require('./routes/reporterRoute');
 // Routes
 app.use('/api/v1/automation', pageSpeedRoute);
+app.use('/api/v1/reporter', reporterRoute);
 
 // Start the server
 app.listen(port, () => console.log(`Server listening on port ${port}`));

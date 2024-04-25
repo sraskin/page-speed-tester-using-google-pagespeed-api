@@ -9,7 +9,7 @@ async function saveReport(performanceScore, accessibilityScore, bestPracticesSco
         pwaScore: pwaScore,
         loadingExperience: loadingExperience,
         testDetails: testDetails,
-        time: new Date()
+        createdAt: new Date()
     });
     await report.save();
     return report;

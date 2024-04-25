@@ -8,7 +8,7 @@ const reportSchema = new mongoose.Schema({
     pwaScore: String,
     loadingExperience: Object,
     testDetails: Object,
-    time: Date,
+    createdAt: Date,
 });
 
 // Export the Request model
