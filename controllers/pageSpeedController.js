@@ -64,8 +64,6 @@ exports.checkPerformance = async (req, res) => {
             analysisUTCTimestamp: res.analysisUTCTimestamp
         };
         //Diagnose performance issues
-        console.log(res.lighthouseResult.categories.seo);
-        console.log(res.lighthouseResult.categories.pwa);
         const performanceScore =
             res.lighthouseResult.categories.performance.score * 100;
         const accessibilityScore =
