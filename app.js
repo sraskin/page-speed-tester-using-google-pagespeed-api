@@ -16,7 +16,10 @@ app.use(morgan('combined'));
 app.use(express.static(join(__dirname, 'public')));
 
 // Connect to MongoDB
-mongoose.connect(MONGO_URL, { useNewUrlParser: true });
+mongoose.connect(MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 // Log when MongoDB connection is opened
 mongoose.connection.once('open', () => {
     console.log('MongoDB connection open');
